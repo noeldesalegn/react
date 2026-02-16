@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+    <!-- 1'st way to code js
+    <script>
+        console.log('hello');
+    </script> -->
+
+    <!-- 2'nd way to code js
+    <script src="react-basics.js"></script>-->
+
+    <!-- 3'rd way to code js called external library
+     <script src="https://unpkg.com/supersimpledev@8.6.4/external-library.js"></script>
+    -->
+     <!-- 
+        In this lesson:
+        1. React = external library that helps us create websites easier
+        2. Load the React external library
+        3. Set up React and use .render()
+        4. Reviewed basics of HTML and JavaScript
+        5. JSX = enhanced version of JavaScript
+        6. Created elements directly with JSX
+        7. Insert values into JSX elements
+     -->
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+        const button = <button>hello</button>;
+        const paragraph = <p>paragraph of texts</p>;
+
+        const div = (
+            <div>
+                <button>hello</button>
+                <p>paragraph of texts {2 + 2}</p>
+             </div>
+        );
+
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(div);
+    </script>
+  </body>
+</html>
